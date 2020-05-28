@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Editar Estudo</title>
+	<style type="text/css">
+		body {text-align: center;}
+		input {margin-bottom: 10px; width: 200px;}
+	</style>
+</head>
+<body>
+
+	<h1>Editar Estudo</h1>
+
+	<hr>
+
+	<form action="http://127.0.0.1:5000/editestudo" method="post">
+		<input type="date" name="i_data" placeholder="Data.." value="{{ estudo['data'] }}">
+		<br>
+		<input type="text" name="i_livro" placeholder="Livro.." value="{{ estudo['livro'] }}">
+		<br>
+		<input type="text" name="i_porção" placeholder="Porção.." value="{{ estudo['porção'] }}">
+		<br>
+		<input type="text" name="i_título" placeholder="Título.." value="{{ estudo['título'] }}">
+		<br>
+		<input type="text" name="i_pid" value="{{ estudo['id'] }}" hidden>
+		<button type="submit">Editar</button>
+		
+	</form>
+
+</body>
+</html>

@@ -1,1 +1,2 @@
+{"data": "26-05-2020", "livro": "Romanos", "por\u00e7\u00e3o": "1:16-17", "t\u00edtulo": "O poder do evangelho", "id": 2}
 {"data": "27-05-2020", "livro": "Romanos", "por\u00e7\u00e3o": "5:1-11", "t\u00edtulo": "Justifica\u00e7\u00e3o pela f\u00e9 e paz com Deus", "id": 1}

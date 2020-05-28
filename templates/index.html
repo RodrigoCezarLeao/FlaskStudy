@@ -10,6 +10,7 @@
 		table, tr, td, th{border:1px solid black; text-align: center;}
 		th, td {padding:2px 5px; width:150px}
 		td:nth-child(4) { width: 300px;}
+		a{color:blue;}
 	</style>
 </head>
 <body>
@@ -36,7 +37,10 @@
 				<td>{{ estudo['livro'] }}</td>
 				<td>{{ estudo['porção'] }}</td>
 				<td>{{ estudo['título'] }}</td>
-				<td><a href="{{ url_for('excluir') + '?pid=' + estudo['id']|string}}">Excluir</a></td>
+				<td>
+					<a href="{{ url_for('excluir') + '?pid=' + estudo['id']|string}}">Excluir</a> | 					
+					<a href="{{ url_for('editar') + '?pid=' + estudo['id']|string}}">Editar</a>
+				</td>
 
 			</tr>
 		{% endfor %}
