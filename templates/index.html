@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cronograma de Estudo</title>
+
+	<style type="text/css">	
+		body{text-align: center; margin: 0 auto;}
+		table { margin: 0 auto; }
+		table, tr, td, th{border:1px solid black; text-align: center;}
+		th, td {padding:2px 5px; width:150px}
+		td:nth-child(4) { width: 300px;}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>Cronograma de Estudo</h1>
+		<a href="{{ url_for('add') }}">Adicionar Estudo</a> | 
+		<a href="{{ url_for('savedatabase') }}" onclick="alert('Database Salvo!')">Salvar Database</a>
+	</header>
+	<hr>
+
+	<table>
+		<tr>
+			<th>Data</th>
+			<th>Livro</th>
+			<th>Porção</th>
+			<th>Título</th>
+			<th>Ações</th>
+		</tr>
+
+		{% for estudo in database %}
+			<tr>
+				<td>{{ estudo['data'] }}</td>
+				<td>{{ estudo['livro'] }}</td>
+				<td>{{ estudo['porção'] }}</td>
+				<td>{{ estudo['título'] }}</td>
+				<td><a href="{{ url_for('excluir') + '?pid=' + estudo['id']|string}}">Excluir</a></td>
+
+			</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>

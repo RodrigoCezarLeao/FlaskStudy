@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Adicionar Estudo</title>
+	<style type="text/css">
+		body {text-align: center;}
+		input {margin-bottom: 10px; width: 200px;}
+	</style>
+</head>
+<body>
+
+	<h1>Adicionar Estudo</h1>
+
+	<hr>
+
+	<form action="http://127.0.0.1:5000/addestudo" method="post">
+		<input type="date" name="i_data" placeholder="Data..">
+		<br>
+		<input type="text" name="i_livro" placeholder="Livro..">
+		<br>
+		<input type="text" name="i_porção" placeholder="Porção..">
+		<br>
+		<input type="text" name="i_título" placeholder="Título..">
+		<br>
+		<button type="submit">Adicionar</button>
+		
+	</form>
+
+</body>
+</html>
