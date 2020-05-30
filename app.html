@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+	<meta charset="utf-8">
+	<title>Aplicação</title>
+</head>
+<body>
+
+	<h1>Olá, {{ nome }} {{ sobrenome }} !</h1>
+
+	<!--
+	Jinja2 -> renderizador de template 	(utiliza o diretório "templates" também)
+	Objetivo separar a regra de negócio da regra de apresentação
+
+	<h1>Hello world!</h1>
+	ou
+	<h1>Hello, {{ name }}!</h1>		#variável python que virá no contexto da requisição
+
+	passar as variáveis na rota: 
+	@app.route('/user/<name>')
+	def index(var):
+		return render_template('index.html', name=var)	#terá o nome 'name' no Jinja2
+
+	#Filtros de Jinja2
+	{{name|filtro}}
+	filtro: capitalize, lower, upper, titler, trim, striptags, safe
+
+
+	#estruturas de controle
+	{% if user %}		#se existir a variável user
+		Hello, {{ user}}!
+	{% else %}
+		Hello, Stranger!
+	{% endif %}
+
+	{% for var in comments %}
+		<li> {{ var }} </li>
+	{% endfor %}
+
+	macros = funções em python
+
+	{% macro render_comment(comment) %}
+		<li> {{ var }} </li>
+	{% endmacro %}
+
+
+	juntando a estrutura de controle com a macro
+	{% for var in comments %}
+		{{ render_comment(var) }}
+	{% endfor %}
+
+	obs: importar arquivos .html com macros
+	obs: blocos de códigos jinja2 
+	{% block nome %}
+		html + jinja2 que desejar
+	{% endblock %}
+
+
+	{# Comentários Jinja2 #}
+
+	-->
+
+</body>
+</html>
